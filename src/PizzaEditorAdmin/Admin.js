@@ -15,8 +15,9 @@ export default function App() {
       method: "POST",
       body: formData,
     }).then((res) => res.json());
+     console.log(res)
   };
-  console.log(res)
+
   return (
     <>
       <form onSubmit={handleSubmit(onSubmit)}>
