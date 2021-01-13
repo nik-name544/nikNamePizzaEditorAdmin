@@ -1,11 +1,7 @@
-import React, { useState, useRef } from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
 
 export default function App() {
-  let str = 10;
-  let issss = 20 ;
-  [str , issss] = [issss, str]
-  console.log(str,  issss)
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
     const formData = new FormData();
@@ -20,7 +16,7 @@ export default function App() {
       body: formData,
     }).then((res) => res.json());
   };
-
+  console.log(res)
   return (
     <>
       <form onSubmit={handleSubmit(onSubmit)}>
